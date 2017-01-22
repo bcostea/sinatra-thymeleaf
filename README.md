@@ -16,7 +16,7 @@ Templating language is here: http://www.thymeleaf.org
 This is a gem so just pop it in your Gemfile:
 
 ```
-gem 'thymeleaf'
+gem 'sinatra-thymeleaf'
 ```
 
 Then, require it and activate the helper in your app:
