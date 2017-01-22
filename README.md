@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/sinatra-thymeleaf.svg)](https://badge.fury.io/rb/sinatra-thymeleaf)
+
 # sinatra-thymeleaf
 Sinatra template support for Thymeleaf.rb
 
