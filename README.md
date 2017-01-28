@@ -44,3 +44,13 @@ The template variables can be passed by using the locals parameter, like this:
 ```
   thyme :test, {:param => 'value'>}
 ```
+
+#Localization support
+You can use i18n localization in your templates, like this:
+
+```
+  <span data-th-text="${t['new.message']}">Some text</span>
+```
+This works by using I18n.t directly so remember to configure i18n for your sinatra app
+
+
