@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'tilt/thymeleaf'
+require 'i18n'
 
 module Sinatra
 
@@ -7,6 +8,7 @@ module Sinatra
     def thyme(template=nil, locals={}, options = {}, &block)
       options, template = template, nil if template.is_a?(Hash)
       template = lambda { block } if template.nil?
+      locals[:t] = lambda { |m| I18n.t(m) }
       render :html, template, options, locals
     end
   end

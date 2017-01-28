@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sinatra-thymeleaf'
-  s.version     = '0.0.8'
+  s.version     = '0.0.9'
   s.date        = '2017-01-28'
   s.summary     = "Sinatra support for Thymeleaf.rb templates"
   s.description = "This is an adaptor gem allowing the use of the Thymeleaf.rb template engine as a Tilt rendering engine for Sinatra"
@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'thymeleaf', '~> 0.1.1'
   s.add_dependency 'sinatra', '~> 1.4'
-
+  s.add_dependency 'i18n', '~> 0.7.0'
 end
