@@ -38,3 +38,9 @@ That's about it.
 
 I'll continue to add functionality and details, as I'm looking to use this in a project.
 Please add issues if you spot any problems.
+
+# Template parameters
+The template variables can be passed by using the locals parameter, like this:
+```
+  thyme :test, {:param => 'value'>}
+```
