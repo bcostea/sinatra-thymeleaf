@@ -10,7 +10,6 @@ module Tilt
     end
 
     def evaluate(scope, locals, &block)
-      puts locals.inspect
       @output ||= Thymeleaf::Template.new(data, locals).render
     end
   end
