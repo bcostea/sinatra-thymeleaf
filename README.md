@@ -53,4 +53,25 @@ You can use i18n localization in your templates, like this:
 ```
 This works by using I18n.t directly so remember to configure i18n for your sinatra app
 
+#Flash support
+You can use the sinatra-flash gem to flash messages through to the thymeleaf template
 
+Just add this to your route:
+```
+flash[:success] = "Whohoo!"
+flash[:error] = "Damn!"
+```
+
+Also, add this to your template:
+```
+<div data-th-unless="${flash[:success].nil?}" class="alert alert-success">
+  <strong>Success!</strong>
+  <span data-th-text="${flash[:success]}"> That worked! </span>
+</div>
+<div data-th-unless="${flash[:error].nil?}" class="alert alert-danger">
+  <strong>Oups!</strong>
+  <span data-th-text="${flash[:error]}"> Something went wrong! </span>
+</div>
+```
+
+And you should be good to go
