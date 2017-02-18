@@ -10,8 +10,9 @@ module Sinatra
       template = lambda { block } if template.nil?
       locals[:t] = lambda { |m| I18n.t(m) }
 
-      unless session['flash'].nil?
-        locals[:flash] = session['flash']
+      locals[:flash] = {}
+      unless flash.nil?
+        locals[:flash] = flash
       end
 
       render :html, template, options, locals
